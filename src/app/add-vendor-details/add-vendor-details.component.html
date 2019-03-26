@@ -1,0 +1,144 @@
+<div class="col-md-12">
+  <p-panel header="Add Vendor Details">
+    <div class="col-md-6">
+      <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label for="vendorName">Name:</label>
+          <input formControlName="vendorName" placeholder="First Name" name="vendorName" class="form-control"
+            id="vendorName">
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input type="address" formControlName="address" placeholder="Address" name="address" class="form-control"
+            id="email">
+        </div>
+
+        <div class="form-group">
+          <label for="serviceField">Service Field:</label>
+          <!-- <p-dropdown [options]="serviceFieldOptions" formControlName="serviceField">
+          </p-dropdown> -->
+          <div>
+            <p-dropdown [options]="serviceFieldOptions" formControlName="serviceField"></p-dropdown>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="academic">Academic:</label>
+          <input formControlName="academic" placeholder="Academic" name="academic" class="form-control" id="academic">
+        </div>
+
+        <div class="form-group">
+          <label for="technical">Technical:</label>
+          <input formControlName="technical" placeholder="Technical" name="technical" class="form-control"
+            id="technical">
+        </div>
+
+        <div class="form-group">
+          <label for="contactNumber">Contact No:</label>
+          <input formControlName="contactNumber" placeholder="Contact No" name="contactNumber" class="form-control"
+            id="contactNumber">
+        </div>
+
+        <div class="form-group">
+          <label for="technical">Alternate No:</label>
+          <input formControlName="alternateNumber" placeholder="Alternate No" name="alternateNumber"
+            class="form-control" id="alternateNumber">
+        </div>
+
+        <div class="form-group">
+          <label for="technical">Email:</label>
+          <input formControlName="email" placeholder="Email" name="email" class="form-control" id="email">
+        </div>
+
+        <div class="form-group">
+          <label for="technical">WhatsApp: </label>
+          <div>
+            <p-radioButton name="whatsapp" label="Yes" formControlName="whatsapp" value="val1"
+              [(ngModel)]="selectedValue">
+            </p-radioButton>
+            <p-radioButton name="whatsapp" label="No" formControlName="whatsapp" value="val2"
+              [(ngModel)]="selectedValue">
+            </p-radioButton>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="twoWheeler">Two Wheeler: </label>
+          <div>
+            <p-radioButton name="twoWheeler" label="Yes" formControlName="twoWheeler" value="val1"
+              [(ngModel)]="selectedValue">
+            </p-radioButton>
+            <p-radioButton name="twoWheeler" label="No" formControlName="twoWheeler" value="val2"
+              [(ngModel)]="selectedValue">
+            </p-radioButton>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="drivingLicense">Driving License: </label>
+          <div>
+            <p-radioButton name="drivingLicense" label="Yes" formControlName="drivingLicense" value="val1"
+              [(ngModel)]="selectedValue">
+            </p-radioButton>
+            <p-radioButton name="drivingLicense" label="No" formControlName="drivingLicense" value="val2"
+              [(ngModel)]="selectedValue">
+            </p-radioButton>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="servicePreferred">Services Preferred:</label>
+          <input formControlName="servicePreferred" placeholder="Services  Preferred" name="servicePreferred"
+            class="form-control" id="servicePreferred">
+        </div>
+
+        <div class="form-group">
+          <label for="preferredCharges">Preferred Charges:</label>
+          <input formControlName="preferredCharges" placeholder="Services  Preferred" name="preferredCharges"
+            class="form-control" id="preferredCharges">
+        </div>
+
+        <div class="form-group">
+          <label for="language">Language (Speak & Understand):</label>
+          <input formControlName="language" placeholder="Language  Preferred" name="language" class="form-control"
+            id="language">
+        </div>
+
+        <div class="form-group">
+          <label for="language">Address Proof:</label>
+          <p-fileUpload name="myfile[]" url="./upload.php"></p-fileUpload>
+        </div>
+        <div class="form-group">
+          <label for="language">ID Proof:</label>
+          <p-fileUpload name="myfile[]" url="./upload.php"></p-fileUpload>
+        </div>
+        <div class="form-group">
+          <label for="language">Technical Certificates Copies:</label>
+          <p-fileUpload name="myfile[]" url="./upload.php"></p-fileUpload>
+        </div>
+
+        <div class="form-group">
+          <label for="bankDetails">Bank Details (A/C & IFSC):</label>
+          <input formControlName="bankDetails" placeholder="Bank Details" name="bankDetails" class="form-control"
+            id="bankDetails">
+        </div>
+
+        <div class="form-group">
+          <label for="verification">Verification:</label>
+          <input formControlName="verification" placeholder="Verification" name="verification" class="form-control"
+            id="verification">
+        </div>
+
+        <div class="form-group">
+          <label for="suggestion">Suggestion:</label>
+          <input formControlName="suggestion" placeholder="Suggestion" name="suggestion" class="form-control"
+            id="suggestion">
+        </div>
+
+        <button class="btn btn-success">Save</button>
+      </form>
+    </div>
+  </p-panel>
+</div>
